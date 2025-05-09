@@ -53,31 +53,6 @@ Using a 4D-Var inspired objective function.
 | **Training**         | 4D-Var style optimization          | Standard fine-tuning              |
 | **Computation**      | O(d) per token                     | O(d²) for full adaptation         |
 
-## Technical Advantages
-
-### Against Static Methods
-- Real-time adaptation to context changes
-- No frozen parameters during generation
-- Automatic compensation for distribution shifts
-
-### Against Retr# Adaptive Embedding Scaling for Language Models
-
-## Core Methodology
-
-### Mathematical Formulation
-
-**Scale Dynamics**  
-`sₜ₊₁ = fφ(sₜ, hₜ) + ε` where:  
-- `ε ∼ N(0,Q)` (process noise)  
-- `fφ`: learned transition network  
-- `sₜ`: scale vector at step t  
-- `hₜ`: hidden state at step t  
-
-**Verification Update**  
-`sₜ ← sₜ + Δs + η𝔼[score(hₜ⁽ᵏ⁾)hₜ⁽ᵏ⁾]`  
-- `Δs`: Low-rank adapter output  
-- `η`: Learning rate  
-- `hₜ⁽ᵏ⁾`: K candidate continuations  
 
 ## Comparison with State-of-the-Art
 
