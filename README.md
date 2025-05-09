@@ -43,15 +43,6 @@ Using a 4D-Var inspired objective function.
 - `η`: Learning rate  
 - `hₜ⁽ᵏ⁾`: K candidate continuations  
 
-## Comparison with State-of-the-Art
-
-| Aspect               | This Work                          | Common Alternatives               |
-|----------------------|------------------------------------|-----------------------------------|
-| **Adaptation**       | Dynamic scale updates              | Static LoRA weights               |
-| **Parameters**       | ~0.1M (scale network + adapter)    | ~1-10% model size (AdapterHub)    |
-| **Generation**       | Online verification                | Fixed RAG retrieval               |
-| **Training**         | 4D-Var style optimization          | Standard fine-tuning              |
-| **Computation**      | O(d) per token                     | O(d²) for full adaptation         |
 
 
 ## Comparison with State-of-the-Art
